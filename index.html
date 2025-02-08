@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Yubhashna ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+            animation: fadeIn 2s ease-in-out;
+            overflow: auto;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        h1 {
+            color: #fff;
+            font-size: 32px;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff; }
+            to { text-shadow: 0 0 20px #ffdde1; }
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff5252;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            animation: bounce 1.5s infinite;
+        }
+        .button:hover {
+            background: #ff1744;
+            transform: scale(1.1);
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
+            padding: 15px;
+            border: 2px dashed white;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: explode 1s linear forwards;
+        }
+        @keyframes explode {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(5); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dear Yubhashna ❤️</h1>
+        <p>Since the day we met, my heart has belonged to you. I know I made mistakes, and I don’t expect an instant answer. But please know, you are my world, and I can’t imagine life without you.</p>
+        <p>From playing badminton to laughing at Uno, from our drum charades to that special train journey – every moment with you is precious to me.</p>
+        
+        <a href="https://instagram.com/thelifeof_urahara" class="button">Let’s Talk</a>
+        <button onclick="showMessage()" class="button">Tap for a Surprise</button>
+        <p id="hiddenMessage" class="hidden-message">No matter what happens, my heart will always call your name. ❤️</p>
+        
+        <button onclick="showWaitMessage()" class="button" style="background: #ffcc00; color: black;">Take Your Time</button>
+        <p id="waitMessage" class="hidden-message" style="display: none;">I understand if you need time. I'll be here, waiting for you, always. 💖</p>
+        
+        <button onclick="showProposal()" class="button proposal-button">Will You Be Mine Forever? 💍</button>
+        <div id="proposalContainer" class="proposal-container">
+            <p>Will you be mine forever, Yubhashna? 💖</p>
+            <button onclick="celebrateLove()" class="button proposal-button">Yes! 💕</button>
+            <button onclick="showSadMessage()" class="button decline-button">No... 😢</button>
+            <p id="sadMessage" class="hidden-message" style="display: none;">I understand... But always remember, you are loved beyond words. 💔</p>
+        </div>
+    </div>
+    
+    <script>
+        function showMessage() {
+            document.getElementById("hiddenMessage").style.display = "block";
+        }
+        function showWaitMessage() {
+            document.getElementById("waitMessage").style.display = "block";
+        }
+        function showProposal() {
+            document.getElementById("proposalContainer").style.display = "block";
+        }
+        function showSadMessage() {
+            document.getElementById("sadMessage").style.display = "block";
+        }
+        function celebrateLove() {
+            const body = document.body;
+            for (let i = 0; i < 50; i++) {
+                let firework = document.createElement("div");
+                firework.classList.add("firework");
+                firework.style.left = Math.random() * 100 + "vw";
+                firework.style.top = Math.random() * 100 + "vh";
+                firework.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                body.appendChild(firework);
+                setTimeout(() => firework.remove(), 1000);
+            }
+            alert("YAY! You said YES! 🎉💕");
+        }
+    </script>
+</body>
+</html>
